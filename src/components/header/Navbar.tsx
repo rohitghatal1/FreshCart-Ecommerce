@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
 
   return (
     <div>
-      <nav className="bg-gray-100 p-4">
+      <nav className="p-4">
         <div className="flex justify-around items-center">
           <ul className="flex space-x-12 text-sm font-medium">
             <li

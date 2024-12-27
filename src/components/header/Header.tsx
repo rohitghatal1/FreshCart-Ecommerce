@@ -1,6 +1,8 @@
 import Navbar from "./Navbar";
 import logo from "../../assets/logos/freshcart.png";
 import { Select } from "antd";
+import { FaRegUser } from "react-icons/fa";
+import { HiOutlineShoppingCart } from "react-icons/hi2";
 const { Option } = Select;
 
 const Header: React.FC = () => {
@@ -88,10 +90,10 @@ const Header: React.FC = () => {
           {/* User and Cart Section */}
           <div className="flex items-center gap-4 w-1/6 justify-evenly">
             <div className="p-2 text-center rounded-md border border-component cursor-pointer">
-              <i className="fa-regular fa-user"></i>
+              <FaRegUser />
             </div>
             <div className="p-2 text-center rounded-md border border-component cursor-pointer">
-              <i className="fa-solid fa-cart-shopping"></i>
+              <HiOutlineShoppingCart />
             </div>
           </div>
         </div>
