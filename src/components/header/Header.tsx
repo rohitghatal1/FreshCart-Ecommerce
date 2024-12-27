@@ -1,10 +1,35 @@
 import Navbar from "./Navbar";
 import logo from "../../assets/logos/freshcart.png";
+import { Select } from "antd";
+const { Option } = Select;
 
 const Header: React.FC = () => {
   const showAllCategories = () => {
     // Handle category logic
   };
+
+  const countries = [
+    "Nepal",
+    "USA",
+    "UK",
+    "India",
+    "Canada",
+    "Australia",
+    "Germany",
+    "France",
+    "Italy",
+    "Japan",
+    "China",
+    "South Korea",
+    "Brazil",
+    "Mexico",
+    "Spain",
+    "Netherlands",
+    "Sweden",
+    "Switzerland",
+    "Singapore",
+    "South Africa",
+  ];
 
   return (
     <div>
@@ -39,31 +64,13 @@ const Header: React.FC = () => {
             <figure className="w-36 h-8 cursor-pointer">
               <img src={logo} alt="Freshcart Logo" className="w-full h-full" />
             </figure>
-            <select
-              name="country"
-              className="p-2 rounded-md border border-component cursor-pointer"
-            >
-              <option value="Nepal">Nepal</option>
-              <option value="USA">USA</option>
-              <option value="UK">UK</option>
-              <option value="India">India</option>
-              <option value="Canada">Canada</option>
-              <option value="Australia">Australia</option>
-              <option value="Germany">Germany</option>
-              <option value="France">France</option>
-              <option value="Italy">Italy</option>
-              <option value="Japan">Japan</option>
-              <option value="China">China</option>
-              <option value="South Korea">South Korea</option>
-              <option value="Brazil">Brazil</option>
-              <option value="Mexico">Mexico</option>
-              <option value="Spain">Spain</option>
-              <option value="Netherlands">Netherlands</option>
-              <option value="Sweden">Sweden</option>
-              <option value="Switzerland">Switzerland</option>
-              <option value="Singapore">Singapore</option>
-              <option value="South Africa">South Africa</option>
-            </select>
+            <Select placeholder="Select a Country" className="w-40">
+              {countries.map((country: string, index: number) => (
+                <Option value={country} key={index}>
+                  {country}
+                </Option>
+              ))}
+            </Select>
           </div>
 
           {/* Search Container */}
@@ -71,7 +78,7 @@ const Header: React.FC = () => {
             <input
               type="search"
               name="search"
-              className="w-full p-2 rounded-md border border-component bg-gray-200"
+              className="w-full p-2 rounded-md border border-component"
             />
             <span className="absolute top-2 right-3 cursor-pointer">
               <i className="fa-solid fa-magnifying-glass"></i>
