@@ -1,15 +1,11 @@
 import Navbar from "./Navbar";
 import logo from "../../assets/logos/freshcart.png";
-import { Select } from "antd";
+import { Button, Input, Select } from "antd";
 import { FaRegUser } from "react-icons/fa";
 import { HiOutlineShoppingCart } from "react-icons/hi2";
 const { Option } = Select;
 
 const Header: React.FC = () => {
-  const showAllCategories = () => {
-    // Handle category logic
-  };
-
   const countries = [
     "Nepal",
     "USA",
@@ -59,9 +55,7 @@ const Header: React.FC = () => {
           </div>
         </div>
 
-        {/* Logo and User Section */}
         <div className="flex justify-between items-center w-11/12 mx-auto py-2 gap-4">
-          {/* Logo and Country */}
           <div className="flex items-center gap-4 w-1/4">
             <figure className="w-36 h-8 cursor-pointer">
               <img src={logo} alt="Freshcart Logo" className="w-full h-full" />
@@ -75,16 +69,8 @@ const Header: React.FC = () => {
             </Select>
           </div>
 
-          {/* Search Container */}
           <div className="relative w-2/3">
-            <input
-              type="search"
-              name="search"
-              className="w-full p-2 rounded-md border border-component"
-            />
-            <span className="absolute top-2 right-3 cursor-pointer">
-              <i className="fa-solid fa-magnifying-glass"></i>
-            </span>
+            <Input.Search />
           </div>
 
           {/* User and Cart Section */}
@@ -101,13 +87,13 @@ const Header: React.FC = () => {
         {/* Categories and Navbar Section */}
         <div className="flex justify-between items-center w-11/12 mx-auto py-2">
           <div>
-            <button
-              className="bg-btn text-white rounded-full px-4 py-2 uppercase text-sm flex items-center gap-2"
-              onClick={showAllCategories}
+            <Button
+              type="primary"
+              className="uppercase text-sm flex items-center gap-2"
             >
               <i className="fa-solid fa-bars"></i> All Categories
               <i className="fa-solid fa-angle-down"></i>
-            </button>
+            </Button>
           </div>
           <div>
             <Navbar />
