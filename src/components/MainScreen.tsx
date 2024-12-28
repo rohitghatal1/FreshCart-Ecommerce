@@ -1,4 +1,5 @@
 import Header from "./header/Header";
+import Homepage from "./pages/Homepage";
 
 const MainScreen: React.FC = () => {
   return (
@@ -6,6 +7,10 @@ const MainScreen: React.FC = () => {
       <div>
         <div>
           <Header />
+        </div>
+
+        <div>
+          <Homepage />
         </div>
       </div>
     </>
