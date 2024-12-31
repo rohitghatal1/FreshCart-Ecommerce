@@ -4,6 +4,7 @@ import MainScreen from "./components/MainScreen";
 import Homepage from "./components/pages/Homepage";
 import MeatSeaFood from "./components/pages/MeatSeaFood";
 import Bakery from "./components/pages/Bakery";
+import Beverages from "./components/pages/Beverages";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route index element={<Homepage />} />
           <Route path="meat-sea-food" element={<MeatSeaFood />} />
           <Route path="bakery" element={<Bakery />} />
+          <Route path="beverages" element={<Beverages />} />
         </Route>
       </Routes>
     </>
