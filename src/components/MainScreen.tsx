@@ -27,14 +27,12 @@ const MainScreen: React.FC = () => {
   };
   return (
     <>
-      <div>
+      <div className="p-2">
         <div>
           <Header />
         </div>
 
-        <div>
-          <Homepage />
-        </div>
+        <div className="p-4 mt-2">{renderContent()}</div>
       </div>
     </>
   );
