@@ -16,6 +16,7 @@
     "mongoose": "^8.9.3"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
     "@types/node": "^22.10.3",
     "nodemon": "^3.1.9",
