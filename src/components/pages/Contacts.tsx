@@ -2,6 +2,13 @@ import { Button, Form, Input } from "antd";
 
 const Contacts: React.FC = () => {
   const [sendMessageForm] = Form.useForm();
+  const submitSendMessageForm = async (values: any) => {
+    try {
+      console.log(values);
+    } catch (err: any) {
+      console.log(err);
+    }
+  };
   return (
     <>
       <div>
@@ -16,7 +23,7 @@ const Contacts: React.FC = () => {
           <div className="border p-3 rounded-md">
             <h3 className="text-center font-semibold">Contact me</h3>
             <div>
-              <Form form={sendMessageForm}>
+              <Form form={sendMessageForm} onFinish={submitSendMessageForm}>
                 <Form.Item label="Name" name="name">
                   <Input />
                 </Form.Item>
