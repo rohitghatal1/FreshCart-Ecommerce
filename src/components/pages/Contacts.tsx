@@ -1,6 +1,7 @@
 import { Button, Form, Input } from "antd";
 
 const Contacts: React.FC = () => {
+  const [sendMessageForm] = Form.useForm();
   return (
     <>
       <div>
@@ -15,17 +16,17 @@ const Contacts: React.FC = () => {
           <div className="border p-3 rounded-md">
             <h3 className="text-center font-semibold">Contact me</h3>
             <div>
-              <Form>
-                <Form.Item label="Name">
+              <Form form={sendMessageForm}>
+                <Form.Item label="Name" name="name">
                   <Input />
                 </Form.Item>
-                <Form.Item label="Subject">
+                <Form.Item label="Subject" name="subject">
                   <Input />
                 </Form.Item>
-                <Form.Item label="Message">
+                <Form.Item label="Message" name="message">
                   <Input />
                 </Form.Item>
-                <Form.Item label="Email">
+                <Form.Item label="Email" name="email">
                   <Input />
                 </Form.Item>
                 <Form.Item>
