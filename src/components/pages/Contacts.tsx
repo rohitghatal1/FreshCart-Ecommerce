@@ -19,11 +19,13 @@ const Contacts: React.FC = () => {
             <figure>
               <img src={profilePhoto} alt="Rohit Ghatal" />
             </figure>
-            <p>Rohit Ghatal</p>
+            <p className="py-2 font-semibold text-lg">Rohit Ghatal</p>
           </div>
           <div className="border p-3 rounded-md">
-            <h3 className="text-center font-semibold">Contact me</h3>
-            <div>
+            <h3 className="text-center font-semibold py-3 text-lg">
+              Contact me:
+            </h3>
+            <div className="mt-3 px-2">
               <Form form={sendMessageForm} onFinish={submitSendMessageForm}>
                 <Form.Item label="Name" name="name">
                   <Input />
