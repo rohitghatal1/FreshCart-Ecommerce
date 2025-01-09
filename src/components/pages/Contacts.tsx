@@ -1,4 +1,5 @@
 import { Button, Form, Input } from "antd";
+import profilePhoto from "../../assets/photos/profilePic.jpg";
 
 const Contacts: React.FC = () => {
   const [sendMessageForm] = Form.useForm();
@@ -16,7 +17,7 @@ const Contacts: React.FC = () => {
         <div className="flex items-center gap-4">
           <div className="border p-3 rounded-md">
             <figure>
-              <img src="#" alt="" />
+              <img src={profilePhoto} alt="Rohit Ghatal" />
             </figure>
             <p>Rohit Ghatal</p>
           </div>
