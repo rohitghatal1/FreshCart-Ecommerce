@@ -1,5 +1,6 @@
 import { Button, Form, Input } from "antd";
 import profilePhoto from "../../assets/photos/profilePic.jpg";
+import TextArea from "antd/es/input/TextArea";
 
 const Contacts: React.FC = () => {
   const [sendMessageForm] = Form.useForm();
@@ -13,7 +14,9 @@ const Contacts: React.FC = () => {
   return (
     <>
       <div>
-        <h2 className="font-semibold text-lg">Contacts</h2>
+        <h2 className="font-semibold text-lg border-b border-b-gray-600 py-3">
+          Contacts
+        </h2>
         <div className="flex items-center gap-4">
           <div className="border p-3 rounded-md">
             <figure>
@@ -34,7 +37,7 @@ const Contacts: React.FC = () => {
                   <Input />
                 </Form.Item>
                 <Form.Item label="Message" name="message">
-                  <Input />
+                  <TextArea />
                 </Form.Item>
                 <Form.Item label="Email" name="email">
                   <Input />
