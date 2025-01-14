@@ -5,6 +5,7 @@ import MeatSeaFood from "./pages/MeatSeaFood";
 import Contacts from "./pages/Contacts";
 import Beverages from "./pages/Beverages";
 import Bakery from "./pages/Bakery";
+import Footer from "./footer/Footer";
 
 const MainScreen: React.FC = () => {
   const location = useLocation();
@@ -33,6 +34,9 @@ const MainScreen: React.FC = () => {
         </div>
 
         <div className="p-4 mt-2">{renderContent()}</div>
+        <div className="mt-2">
+          <Footer />
+        </div>
       </div>
     </>
   );
