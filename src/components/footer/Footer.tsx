@@ -1,7 +1,9 @@
 const Footer: React.FC = () => {
   return (
     <>
-      <h2>Footer</h2>
+      <div className="bg-slate-400 border-t border-t-gray-500 p-3">
+        <div className="p-1 flex justify-between"></div>
+      </div>
     </>
   );
 };
